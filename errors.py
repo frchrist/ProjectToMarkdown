@@ -1,0 +1,4 @@
+class ERROR_CODE:
+    E1010 = "error code 1010 : INCORRECT OUPUT FORMAT"
+    E1012 = "error code 1012 : PROGRAM SHUT DOWN"
+    ALL_E100 = (E1010, E1012)
