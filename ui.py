@@ -6,19 +6,7 @@ from tkinter import ttk
 from tkinter.filedialog import askdirectory
 import process
 import errors
-APP_NAME = "Project to markdown"
-APP_AUTHOR = "topdev21 #darichOB1100"
-APP_VERSION = "V1"
-PYTHON_VERSION="python 3.8.0"
-APP_DESCRIPTIOIN = """
-    The gool of this application is to have the 
-    code source of your project in printable version.
-    so this app will just loop thought all file in the project
-    code source and convert it in one big markdown file which  you can
-    convert in pdf or html to print.
-"""
-
-
+APP_NAME = "To Md Converter"
 
 class Commands:
     @staticmethod
@@ -42,11 +30,6 @@ class Commands:
         os.remove(filename)
         return dir
 
-
-
-
-
-
 class UI(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
@@ -55,7 +38,6 @@ class UI(tk.Tk):
         self.resizable(0,0)
         self.properties()
         self.mainLayout()
-        
 
     def properties(self):
         self.main_project_dir_var = tk.StringVar()
@@ -74,7 +56,6 @@ class UI(tk.Tk):
         label.pack(side=tk.TOP, fill=tk.X)
         self.__FileInformations()
         self.__LogsSections()
-
 
     def logging(self,func):
         pass
@@ -129,10 +110,6 @@ class UI(tk.Tk):
         self.folder_and_files_var.pack()
 
         ignoreFrame.pack(side=tk.RIGHT)
-
-
-
-
         mainFrame.pack(fill=tk.X)
 
     def __LogsSections(self):
@@ -143,10 +120,6 @@ class UI(tk.Tk):
         self.logs_var.insert(tk.END,"[+]Success\n")
         self.logs_var.config(state="disable")
         infoFrame.pack(fill=tk.X, padx=10)
-
-        
-        
-
 if __name__ == "__main__":
     root = UI()
     root.mainloop()
