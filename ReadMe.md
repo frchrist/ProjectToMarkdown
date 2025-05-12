@@ -1,4 +1,5 @@
 # Project to Markdown
+![GitHub Image Preview](./shot.png)
 ## Features
 - Combine multiple Python files into a single markdown document.
 - Preserve Python code formatting and structure.
