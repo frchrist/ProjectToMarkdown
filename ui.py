@@ -52,7 +52,7 @@ class UI(tk.Tk):
         self.folder_and_files_var.get()
 
     def __MainLabel(self):
-        label = tk.Label(self, text="Convert your project to One markdown", font=("Helvetica", 16, "bold"), bg="#CDCDCD")
+        label = tk.Label(self, text="Convert it Now", font=("Helvetica", 16, "bold"), bg="#CDCDCD")
         label.pack(side=tk.TOP, fill=tk.X)
         self.__FileInformations()
         self.__LogsSections()
@@ -93,7 +93,7 @@ class UI(tk.Tk):
 
 
         tk.Entry(frame, font=self.Entryfont,textvariable=self.output_var).grid(column=1,row=1)
-        ttk.Button(frame,text="Designation directory", 
+        ttk.Button(frame,text="Destination directory", 
         ).grid(column=3, row=1, ipady=3, padx=2)
 
 
