@@ -108,8 +108,8 @@ class UI(tk.Tk):
         entry_var.set(value)
         self.logs_var.insert(tk.END, f"[{datetime.datetime.now()}] Choosing folder {value} Done\n")
         self.logs_var.config(state="disable")
-    
     def create_file_info_side(self):
+
         """
         This method is used to create the file information side of the application. 
         """
@@ -120,8 +120,8 @@ class UI(tk.Tk):
         tk.Entry(frame, font=self.entry_font,
          textvariable=self.main_project_dir_var).grid(column=1,row=0)
         ttk.Button(frame,text="Select",
-                   command=lambda :self.update_entry_section(self.main_project_dir_var,Commands.open_dir()
-                    )).grid(column=3, row=0, ipady=3, padx=2)
+        command=lambda :self.update_entry_section(self.main_project_dir_var,Commands.open_dir())
+                   ).grid(column=3, row=0, ipady=3, padx=2)
         tk.Label(frame, text="Project name" ).grid(column=0, row=1)
         tk.Entry(frame, font=self.entry_font,textvariable=self.output_var).grid(column=1,row=1)
         ttk.Button(frame,text="Destination directory",
@@ -136,10 +136,9 @@ class UI(tk.Tk):
 
         frame.pack(padx=2, pady=2)
         info_frame.pack(side=tk.LEFT)
-
-        ignores_frame = ttk.LabelFrame(main_frame, 
+        ignores_frame = ttk.LabelFrame(main_frame,
                                        text="Ignore file and folders", height=15, padding=10)
-        folder_and_files_var = tk.Text(ignores_frame, 
+        folder_and_files_var = tk.Text(ignores_frame,
                                        width=40, height=5, font=("Poppins",9,"italic"))
         folder_and_files_var.pack()
 
