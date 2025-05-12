@@ -25,9 +25,6 @@ def processing(dir_name, output: str, ignore_files_plus=[], ignore_dirs_plus = [
 		for name in files:
 			if name in ignore_files:
 				continue
-
-            
-
 			#check if file is code source
 			if extension.get(name.split(".")[-1]) == None:
 				"""
@@ -37,10 +34,7 @@ def processing(dir_name, output: str, ignore_files_plus=[], ignore_dirs_plus = [
 				"""
 				continue
         
-
-
 			path = os.path.join(root,name)
-
 						
 			with open(output, 'a+') as file:
 				try:
@@ -49,7 +43,6 @@ def processing(dir_name, output: str, ignore_files_plus=[], ignore_dirs_plus = [
 
 						for line in codeContent:
 							sysout(line)
-							
 
 							cString += line
 						ext = name.split(".")[-1]
@@ -61,10 +54,7 @@ def processing(dir_name, output: str, ignore_files_plus=[], ignore_dirs_plus = [
 				except UnicodeDecodeError as e:
 					sysout(e)
 					pass
-
 				except Exception as e:
 					sysout("ERROR [-] "+e)
 
-
 	return output
-
