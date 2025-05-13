@@ -4,6 +4,7 @@ import os
 from typing import Iterable, List
 from .errors import FileProcessingException
 
+#pylint: disable=duplicate-code
 # Load programming language extensions
 def load_extensions(file_path: str) -> dict:
     """
@@ -59,11 +60,8 @@ def process_file(file_path, output, extension, sysout) -> None:
             content = f'\n### {file_path}\n```{programming_lang} \n{c_string}```\n\n'
             with open(output, 'a+', encoding="utf-8") as file:
                 file.write(content)
-    except UnicodeDecodeError as e:
-        sysout(e)
-    except FileNotFoundError as e:
-        sysout(f"ERROR [-] {e}")
-    except (PermissionError, IsADirectoryError, OSError, FileProcessingException) as e:
+    except (UnicodeDecodeError, FileNotFoundError,PermissionError,
+            IsADirectoryError, OSError, FileProcessingException) as e:
         sysout(f"ERROR [-] {e}")
 
 # Main processing function

@@ -9,7 +9,7 @@ from .process import processing
 from .errors import FileProcessingException
 
 APP_NAME = "To Md Converter"
-
+#pylint: disable=duplicate-code
 class Commands:
     """
     This class is used to process the files and directories.
@@ -159,6 +159,5 @@ class Gui(tk.Tk):
         """
             Logging the content to the log window.
         """
-        self.logs_var.config(state=tk.NORMAL)
         self.logs_var.insert(tk.END, f"[{datetime.datetime.now()}]{content}\n")
         self.logs_var.config(state=tk.DISABLED)

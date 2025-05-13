@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from enum import Enum
 
+#pylint: disable=duplicate-code
 class ErrorCodes(Enum):
     """
     ErrorCodes(Enum):
